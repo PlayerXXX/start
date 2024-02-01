@@ -20,23 +20,11 @@ echo 请输入要启动的项目
 echo.
 echo ==============================
 echo.
-echo 1.打包企代号
+echo 1.打包xxx
 echo.
-echo 2.打包企业号
+echo 2.启动yyy
 echo.
-echo 3.打包平台端
-echo.
-echo 4.小游戏
-echo.
-echo 5.地推二期
-echo.
-echo 6.平台端
-echo.
-echo 7.React
-echo.
-echo 8.好彩
-echo.
-echo 9.预约后管
+echo 3.启动zzz
 echo.
 echo ==============================
 echo.
@@ -45,42 +33,14 @@ call :%cnum%
 if %errorlevel%==1 goto main
 
 :1
-start "企代号" cmd /k "cd /d D:/Workspace/eb_ui & npm run build & cd.>dist.zip"
+start "xxx" cmd /k "cd /d D:/Workspace/xxx & npm run build & cd.>dist.zip"
 exit
 
 :2
-start "企业号" cmd /k "cd /d D:/Workspace/firm_web & npm run build & cd.>dist.zip"
+start "yyy" cmd /k "cd /d D:/Workspace/yyy & npm run serve"
 exit
 
 :3
-start "平台端" cmd /k "cd /d D:/Workspace/terrace_web & npm run build & cd.>dist.zip"
-exit
-
-:4
-start "前端" cmd /k "cd /d D:/Workspace/SimulationGame-ui & npm start"
-exit
-
-:5
-start "前端" cmd /k "cd /d D:/Workspace/lottery_push_ui/lottery_web & npm run serve"
-exit
-
-:6
-start "前端" cmd /k "cd /d D:/Workspace/terrace_web & npm run serve"
-exit
-
-:7
-start "前端" cmd /k "cd /d D:/Workspace/ReactDemo/demo01 & npm start"
-exit
-
-:8
-start "前端" cmd /k "cd /d D:/Workspace/haocai_ui & npm start"
-exit
-
-:9
-start "前端" cmd /k "cd /d D:/Workspace/yuyue_admin_ui & npm run dev"
-exit
-
-:10
-start "前端" cmd /k "cd /d D:/Workspace/lottery_push_ui/lottery_web & npm run serve"
-start "后端" cmd /k "cd /d D:/Workspace/lottery_push_api & mvn clean spring-boot:run"
+start "zzz前端" cmd /k "cd /d D:/Workspace/zzz & npm run serve"
+start "zzz后端" cmd /k "cd /d D:/Workspace/zzz & mvn clean spring-boot:run"
 exit
